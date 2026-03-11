@@ -81,12 +81,24 @@ function App() {
 
         <div className="controls">
           <div className="search" role="search">
-            <span className="searchIcon" aria-hidden="true">
-              ⌕
-            </span>
+            <svg
+              className="searchIcon"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <path
+                d="M10.5 3a7.5 7.5 0 1 0 4.55 13.47l4.49 4.48a1 1 0 0 0 1.42-1.42l-4.48-4.49A7.5 7.5 0 0 0 10.5 3Zm-5.5 7.5a5.5 5.5 0 1 1 11 0 5.5 5.5 0 0 1-11 0Z"
+                fill="currentColor"
+              />
+            </svg>
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') setQuery('')
+              }}
               placeholder="Search by name, role, skill, country…"
               aria-label="Search developer profiles"
             />
@@ -97,7 +109,7 @@ function App() {
                 onClick={() => setQuery('')}
                 aria-label="Clear search"
               >
-                Clear
+                <span aria-hidden="true">×</span>
               </button>
             ) : null}
           </div>
@@ -123,12 +135,6 @@ function App() {
           />
         ))}
       </main>
-
-      <footer className="footer">
-        <span>
-          Contribute by adding a JSON file in <code>developers/</code>.
-        </span>
-      </footer>
     </div>
   )
 }
