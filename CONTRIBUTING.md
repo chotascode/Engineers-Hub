@@ -10,13 +10,13 @@ Thanks for contributing! The main way to help is to add your developer profile.
 
 ```json
 {
-  "name": "Your Name",
+  "name": "Didar Karim",
   "role": "Full Stack Developer",
-  "avatar": "/your-photo.png",
-  "github": "https://github.com/yourusername",
+  "avatar": "./public/didarkarm.jpg",
+  "github": "https://github.com/didark90",
   "linkedin": "https://linkedin.com/in/yourprofile",
   "portfolio": "https://yourwebsite.com",
-  "country": "Your Country"
+  "country": "pakistan"
 }
 ```
 
